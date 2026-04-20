@@ -1,0 +1,176 @@
+.app-shell {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+}
+
+.brand {
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: #111827;
+}
+
+.ghost-btn {
+  border: 1px solid #d1d5db;
+  background: #fff;
+  color: #374151;
+  border-radius: 999px;
+  padding: 0.55rem 1rem;
+  font-size: 0.9rem;
+}
+
+.hero {
+  margin-bottom: 3rem;
+}
+
+.eyebrow {
+  font-size: 0.8rem;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: #4b5563;
+  margin-bottom: 0.75rem;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(1.9rem, 2.8vw, 2.9rem);
+  line-height: 1.15;
+  color: #0f172a;
+}
+
+.subtitle {
+  margin-top: 0.9rem;
+  max-width: 60ch;
+  color: #475569;
+}
+
+.hero-grid {
+  margin-top: 1.75rem;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.compose-card,
+.preview-card,
+.section-block,
+.feature-grid article {
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  background: #ffffff;
+}
+
+.compose-card,
+.preview-card {
+  padding: 1rem;
+}
+
+.compose-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.compose-card label {
+  font-weight: 600;
+  color: #1f2937;
+}
+
+textarea {
+  border: 1px solid #d1d5db;
+  border-radius: 12px;
+  min-height: 170px;
+  font: inherit;
+  color: #1f2937;
+  background: #f8fafc;
+  padding: 0.85rem;
+  resize: vertical;
+}
+
+.primary-btn {
+  border: none;
+  border-radius: 12px;
+  background: #1d4ed8;
+  color: #ffffff;
+  padding: 0.75rem 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.primary-btn:disabled {
+  opacity: 0.7;
+  cursor: progress;
+}
+
+.error-text {
+  margin: 0;
+  color: #b91c1c;
+  font-size: 0.95rem;
+}
+
+.preview-card h2,
+.section-block h2 {
+  margin: 0;
+  font-size: 1.15rem;
+  color: #111827;
+}
+
+.preview-card h3 {
+  margin: 0.9rem 0 0.5rem;
+  font-size: 1rem;
+  color: #0f172a;
+}
+
+.preview-card p,
+.feature-grid p,
+.empty-state {
+  color: #475569;
+  margin: 0;
+}
+
+.preview-card ol {
+  margin: 0.85rem 0 0;
+  padding-left: 1.2rem;
+  display: grid;
+  gap: 0.6rem;
+  color: #1f2937;
+}
+
+.section-block {
+  padding: 1.2rem;
+}
+
+.feature-grid {
+  margin-top: 0.9rem;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
+.feature-grid article {
+  padding: 1rem;
+}
+
+.feature-grid h3 {
+  margin: 0 0 0.4rem;
+  font-size: 1rem;
+  color: #111827;
+}
+
+@media (max-width: 900px) {
+  .hero-grid,
+  .feature-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .topbar {
+    margin-bottom: 2rem;
+  }
+}
