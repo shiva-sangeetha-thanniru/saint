@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=IBM+Plex+Sans:wght@400;500;600&display=swap');
 @import 'tailwindcss';
 
 @layer base {
@@ -10,11 +10,20 @@
 
   body {
     margin: 0;
-    font-family: Roboto, 'Segoe UI', Tahoma, sans-serif;
-    background: #f8fafc;
-    color: #0f172a;
+    font-family: 'IBM Plex Sans', 'Segoe UI', Tahoma, sans-serif;
+    background: linear-gradient(160deg, #eff3f8 0%, #f6f8fb 50%, #edf2f9 100%);
+    color: #102033;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: Manrope, 'IBM Plex Sans', sans-serif;
   }
 }
 
