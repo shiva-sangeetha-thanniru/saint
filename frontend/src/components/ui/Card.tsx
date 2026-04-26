@@ -9,7 +9,7 @@ function Card({ children, className }: CardProps) {
   return (
     <article
       className={cn(
-        'rounded-2xl border border-white/45 bg-white/78 p-5 shadow-[0_18px_44px_rgba(15,23,42,0.08)] backdrop-blur-xl transition duration-300 hover:-translate-y-1 hover:border-fuchsia-200 hover:shadow-[0_20px_52px_rgba(102,45,140,0.2)]',
+        'rounded-2xl border border-[var(--line-soft)] bg-[var(--surface-2)] p-5 shadow-[var(--shadow-sm)] backdrop-blur-xl transition duration-300 hover:-translate-y-1 hover:border-[var(--line-strong)] hover:shadow-[var(--shadow-md)]',
         className,
       )}
     >

@@ -28,7 +28,13 @@ function App() {
   }, [])
 
   return (
-    <div className="min-h-screen bg-[radial-gradient(circle_at_10%_0%,rgba(102,45,140,0.24)_0%,rgba(237,30,121,0.14)_30%,rgba(248,250,252,1)_66%)] pt-16 text-slate-900">
+    <div className="page-shell min-h-screen pt-16 text-[var(--ink-900)]">
+      <a
+        href="#hero"
+        className="sr-only rounded-lg bg-[var(--surface-0)] px-3 py-2 text-sm font-medium text-[var(--ink-900)] focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[100]"
+      >
+        Skip to content
+      </a>
       <TopHeader />
       <HeroSection />
       <FeaturesSection />

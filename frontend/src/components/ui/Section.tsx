@@ -11,11 +11,17 @@ type SectionProps = {
 
 function Section({ id, eyebrow, title, description, children, className }: SectionProps) {
   return (
-    <section id={id} className={cn('reveal-on-scroll py-12 sm:py-16', className)}>
-      <header className="mb-6 sm:mb-8">
-        {eyebrow && <p className="text-xs font-bold uppercase tracking-[0.16em] text-[#662d8c]">{eyebrow}</p>}
-        <h2 className="mt-2 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">{title}</h2>
-        {description && <p className="mt-3 max-w-3xl text-base leading-7 text-slate-700">{description}</p>}
+    <section id={id} className={cn('reveal-on-scroll py-14 sm:py-20', className)}>
+      <header className="mb-8 sm:mb-10">
+        {eyebrow && (
+          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[var(--brand-700)]">
+            {eyebrow}
+          </p>
+        )}
+        <h2 className="font-display mt-3 max-w-4xl text-3xl font-semibold tracking-[-0.02em] text-[var(--ink-900)] sm:text-4xl lg:text-5xl">
+          {title}
+        </h2>
+        {description && <p className="mt-4 max-w-3xl text-base leading-7 text-[var(--ink-600)]">{description}</p>}
       </header>
       {children}
     </section>

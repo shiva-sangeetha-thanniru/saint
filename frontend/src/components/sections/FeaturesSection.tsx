@@ -4,7 +4,7 @@ import Section from '../ui/Section'
 
 const features = [
   {
-    icon: 'RA',
+    icon: 'RT',
     title: 'Routing Intelligence',
     description: 'Deterministic confidence scoring routes every request to the best-fit agent with transparent reason codes.',
   },
@@ -45,13 +45,13 @@ function FeaturesSection() {
         description="Each module is designed for velocity, safety, and explainability without sacrificing developer ergonomics."
       >
         <div className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3">
-          {features.map((feature) => (
-            <Card key={feature.title} className="group">
-              <div className="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-xl border border-fuchsia-200 bg-fuchsia-50 text-sm font-bold text-[#662d8c] transition group-hover:border-fuchsia-300 group-hover:bg-fuchsia-100 group-hover:text-[#ed1e79]">
+          {features.map((feature, index) => (
+            <Card key={feature.title} className={`group reveal-on-scroll stagger-${(index % 4) + 1}`}>
+              <div className="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-xl border border-[#c5d8f1] bg-[#ecf5ff] text-sm font-bold text-[#0f5fd4] transition group-hover:border-[#9dc2ed] group-hover:bg-[#deefff] group-hover:text-[#0a4fa8]">
                 {feature.icon}
               </div>
-              <h3 className="text-xl font-semibold text-slate-900">{feature.title}</h3>
-              <p className="mt-2 text-sm leading-6 text-slate-700">{feature.description}</p>
+              <h3 className="font-display text-xl font-semibold text-[var(--ink-900)]">{feature.title}</h3>
+              <p className="mt-2 text-sm leading-6 text-[var(--ink-600)]">{feature.description}</p>
             </Card>
           ))}
         </div>
