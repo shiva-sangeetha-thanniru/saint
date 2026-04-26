@@ -1,7 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=IBM+Plex+Sans:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 @import 'tailwindcss';
 
 @layer base {
+  :root {
+    color-scheme: light;
+  }
+
   html,
   body,
   #root {
@@ -10,50 +14,62 @@
 
   body {
     margin: 0;
-    font-family: 'IBM Plex Sans', 'Segoe UI', Tahoma, sans-serif;
-    background: linear-gradient(160deg, #eff3f8 0%, #f6f8fb 50%, #edf2f9 100%);
-    color: #102033;
+    font-family: Inter, 'Segoe UI', Tahoma, sans-serif;
+    background: #f8faff;
+    color: #0f172a;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    font-family: Manrope, 'IBM Plex Sans', sans-serif;
+  * {
+    box-sizing: border-box;
   }
 }
 
 @layer utilities {
-  @keyframes float-soft {
+  @keyframes soft-float {
     0%,
     100% {
       transform: translateY(0);
     }
     50% {
-      transform: translateY(-6px);
+      transform: translateY(-5px);
     }
   }
 
-  @keyframes fade-rise {
-    from {
+  @keyframes fade-up {
+    0% {
       opacity: 0;
-      transform: translateY(8px);
+      transform: translateY(14px);
     }
-    to {
+    100% {
       opacity: 1;
       transform: translateY(0);
     }
   }
 
-  .animate-float-soft {
-    animation: float-soft 6s ease-in-out infinite;
+  .reveal-on-scroll {
+    opacity: 0;
+    transform: translateY(14px);
+    transition: opacity 500ms ease, transform 500ms ease;
   }
 
-  .animate-fade-rise {
-    animation: fade-rise 300ms ease-out;
+  .reveal-on-scroll.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .animate-soft-float {
+    animation: soft-float 6s ease-in-out infinite;
+  }
+
+  .animate-fade-up {
+    animation: fade-up 460ms ease forwards;
+  }
+
+  .glass-surface {
+    border: 1px solid rgba(255, 255, 255, 0.45);
+    background: rgba(255, 255, 255, 0.78);
+    backdrop-filter: blur(14px);
   }
 }
