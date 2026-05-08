@@ -16,7 +16,7 @@ By automating repetitive and complex tasks, SAINT not only accelerates delivery 
 - 🔄 **Agent Correction Protocol**: Structured mismatch detection with user confirmation before agent switching
 - 🔁 **MCP Runtime Fallback**: Retry-once for transient errors, degrade to Workflow, clarify for missing inputs
 - 🔄 **End-to-End Automation**: From design files to JIRA issues to executable test scripts
-- 🌐 **Multi-LLM Support**: OpenAI, Anthropic (Claude), Google (Gemini), Groq, Amazon Bedrock
+- 🌐 **Multi-LLM Support**: OpenAI, Anthropic (Claude), Google (Gemini), Grok, Amazon Bedrock
 - 🤖 **AI Engineer Mode**: Single-command SDET flow—describe a flow in plain English, get tests, and optionally run and gate (Bug0-style)
 - 💬 **SAINT Chat**: Conversational natural-language interface via MCP for on-demand test generation
 - 📊 **Enterprise Integration**: JIRA, X-Ray, Atlassian MCP, and Figma MCP
@@ -349,11 +349,11 @@ LLM_MODEL=gemini-1.5-flash
 GOOGLE_API_KEY=your_key_here
 ```
 
-#### Groq
+#### Grok
 ```bash
-LLM_PROVIDER=groq
+LLM_PROVIDER=Grok
 LLM_MODEL=llama-3.1-70b-versatile
-GROQ_API_KEY=your_key_here
+Grok_API_KEY=your_key_here
 ```
 
 #### Amazon Bedrock
@@ -372,10 +372,10 @@ Override the default provider per command by placing `--provider` before the sub
 ```bash
 saint --provider openai generate-script --web login.feature
 saint --provider openai generate-test-scenarios --project-key PROJ-1
-saint --provider groq generate --project PROJ
+saint --provider Grok generate --project PROJ
 ```
 
-Supported providers: `openai`, `anthropic`, `google`, `groq`, `bedrock`.
+Supported providers: `openai`, `anthropic`, `google`, `Grok`, `bedrock`.
 
 ### SSL and Proxy Configuration
 
@@ -427,7 +427,7 @@ SAINT exposes **18 tools** via the Model Context Protocol (MCP) JSON-RPC server.
 | 17 | `preview_test_data` | Preview generated test data files | *(none)* |
 | 18 | `saint_chat` | Conversational interface (auto-routes to the right agent) | `prompt` |
 
-All agent tools accept an optional `provider` parameter (`auto`, `openai`, `anthropic`, `google`, `groq`, `bedrock`) to override the default LLM.
+All agent tools accept an optional `provider` parameter (`auto`, `openai`, `anthropic`, `google`, `Grok`, `bedrock`) to override the default LLM.
 
 ### MCP Configuration
 

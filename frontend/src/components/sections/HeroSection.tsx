@@ -46,7 +46,7 @@ function HeroSection() {
   useEffect(() => {
     const timer = window.setInterval(() => {
       setActiveAgentIndex((previousIndex) => (previousIndex + 1) % agentPreviews.length)
-    }, 800)
+    }, 1500)
 
     return () => window.clearInterval(timer)
   }, [])
