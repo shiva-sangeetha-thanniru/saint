@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import Container from '../ui/Container'
 import Section from '../ui/Section'
+import { APP_NAME } from '../../constants/app'
 
 const dashboardViews = [
   {
@@ -118,12 +119,13 @@ function DashboardPreviewSection() {
         eyebrow="Dashboard Preview"
         title="A SaaS command center for end-to-end test operations"
         description="Monitor orchestration state, quality trends, and execution queues in a single screen."
+        className="pt-7 sm:pt-10"
       >
         <div className="overflow-hidden rounded-3xl border border-[var(--line-soft)] bg-[var(--surface-2)] shadow-[var(--shadow-md)] backdrop-blur-xl">
           <div className="grid min-h-[420px] grid-cols-1 lg:grid-cols-[220px_1fr]">
             <aside className="border-b border-[rgba(255,255,255,0.1)] bg-[linear-gradient(175deg,#10233d,#15395c)] p-5 text-slate-200 lg:border-b-0 lg:border-r">
               <p className="text-xs font-semibold uppercase tracking-[0.16em] text-slate-400">Workspace</p>
-              <h3 className="mt-3 text-lg font-semibold text-white">SAINT Ops</h3>
+              <h3 className="mt-3 text-lg font-semibold text-white">{`${APP_NAME} Ops`}</h3>
               <nav className="mt-6 space-y-2">
                 {navItems.map((item, index) => (
                   <a

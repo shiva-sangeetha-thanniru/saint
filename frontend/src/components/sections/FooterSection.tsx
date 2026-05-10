@@ -1,5 +1,6 @@
 import Button from '../ui/Button'
 import Container from '../ui/Container'
+import { APP_NAME } from '../../constants/app'
 
 function FooterSection() {
   const socialLinks = [
@@ -43,14 +44,14 @@ function FooterSection() {
 
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-6 lg:gap-6">
           <section className="sm:col-span-2 lg:col-span-2">
-            <a href="#hero" className="inline-flex items-center gap-3" aria-label="SAINT home">
+            <a href="#hero" className="inline-flex items-center gap-3" aria-label={`${APP_NAME} home`}>
               <span
                 aria-hidden="true"
                 className="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-[#0f5fd4] to-[#0ea5b1] text-sm font-bold text-white shadow-[0_10px_24px_rgba(15,95,212,0.34)]"
               >
-                S
+                {APP_NAME.charAt(0)}
               </span>
-              <span className="font-display text-base font-semibold tracking-wide text-[var(--ink-900)]">SAINT</span>
+              <span className="font-display text-base font-semibold tracking-wide text-[var(--ink-900)]">{APP_NAME}</span>
             </a>
             <p className="mt-3 max-w-sm text-sm leading-6 text-[var(--ink-600)]">
               AI quality orchestration platform for resilient test execution, deterministic routing, and governed
@@ -170,7 +171,7 @@ function FooterSection() {
         </div>
 
         <div className="mt-6 flex flex-col gap-3 border-t border-[var(--line-soft)] pt-4 text-xs text-[var(--ink-600)] sm:flex-row sm:items-center sm:justify-between">
-          <p>© {new Date().getFullYear()} SAINT. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} {APP_NAME}. All rights reserved.</p>
         </div>
       </Container>
     </footer>
