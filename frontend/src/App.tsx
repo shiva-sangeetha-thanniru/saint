@@ -28,7 +28,7 @@ function App() {
   }, [])
 
   return (
-    <div className="page-shell min-h-screen pt-16 text-[var(--ink-900)]">
+    <div className="page-shell min-h-screen overflow-x-clip pt-16 text-[var(--ink-900)]">
       <a
         href="#hero"
         className="sr-only rounded-lg bg-[var(--surface-0)] px-3 py-2 text-sm font-medium text-[var(--ink-900)] focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[100]"

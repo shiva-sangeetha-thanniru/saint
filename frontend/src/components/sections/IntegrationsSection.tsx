@@ -13,7 +13,7 @@ function IntegrationsSection() {
         title="Works with the tools your testing teams already use"
         description={`Plug ${APP_NAME} into engineering, product, and delivery ecosystems without friction.`}
       >
-        <div className="grid grid-cols-2 gap-3 sm:grid-cols-4 lg:grid-cols-8">
+        <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-8">
           {logos.map((logo, index) => (
             <div
               key={logo}

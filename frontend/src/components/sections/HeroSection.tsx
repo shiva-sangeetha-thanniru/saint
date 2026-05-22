@@ -65,10 +65,10 @@ function HeroSection() {
     <section id="hero" className="relative overflow-hidden pt-10 sm:pt-14">
       <div className="absolute inset-x-0 -top-28 h-80 bg-[radial-gradient(circle_at_top,rgba(15,95,212,0.3),rgba(14,165,177,0.16)_38%,rgba(15,23,42,0)_72%)]" />
       <Container>
-        <div className="glass-surface reveal-on-scroll grid gap-8 rounded-3xl p-6 md:p-8 lg:grid-cols-[1.05fr_0.95fr] lg:gap-10">
+        <div className="glass-surface reveal-on-scroll grid gap-8 rounded-3xl p-5 sm:p-6 md:p-8 lg:grid-cols-[1.05fr_0.95fr] lg:gap-10">
           <div>
             <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[var(--brand-700)]">AI Testing Control Plane</p>
-            <h1 className="font-display mt-3 text-4xl font-semibold leading-[1.05] tracking-[-0.02em] text-[var(--ink-900)] sm:text-5xl lg:text-6xl">
+            <h1 className="font-display mt-3 text-3xl font-semibold leading-[1.05] tracking-[-0.02em] text-[var(--ink-900)] sm:text-5xl lg:text-6xl">
               Govern autonomous quality workflows with enterprise-grade confidence.
             </h1>
             <p className="mt-4 max-w-2xl text-base leading-7 text-[var(--ink-600)] sm:text-lg">
@@ -171,7 +171,7 @@ function HeroSection() {
 })
 execute(plan: "${activePreview.plan}")`}
             </pre>
-            <div className="mt-4 grid grid-cols-3 gap-2 text-center text-xs">
+            <div className="mt-4 grid grid-cols-1 gap-2 text-center text-xs sm:grid-cols-3">
               <div className="rounded-lg border border-white/10 bg-white/5 p-2">
                 <p className="text-cyan-200">Agents</p>
                 <p className="mt-1 text-sm font-semibold text-white">14</p>

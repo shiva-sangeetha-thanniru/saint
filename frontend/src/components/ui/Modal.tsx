@@ -37,7 +37,7 @@ function Modal({ open, title, description, onClose, children, className }: Modal
 
   return (
     <div className="fixed inset-0 z-[80] flex items-center justify-center bg-[rgba(8,15,28,0.55)] p-4" role="dialog" aria-modal="true" aria-label={title}>
-      <div className={cn('glass-surface w-full max-w-lg rounded-2xl p-6 sm:p-7', className)}>
+      <div className={cn('glass-surface max-h-[calc(100vh-2rem)] w-full max-w-lg overflow-y-auto rounded-2xl p-6 sm:max-h-[calc(100vh-3rem)] sm:p-7', className)}>
         <div className="flex items-start justify-between gap-4">
           <div>
             <h3 className="font-display text-xl font-semibold text-[var(--ink-900)]">{title}</h3>
