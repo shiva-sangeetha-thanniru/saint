@@ -40,6 +40,7 @@
   body {
     margin: 0;
     font-family: Manrope, 'Segoe UI', Tahoma, sans-serif;
+    overflow-x: hidden;
     background:
       radial-gradient(circle at 10% -10%, var(--bg-mesh-a), transparent 38%),
       radial-gradient(circle at 85% 0%, var(--bg-mesh-b), transparent 44%),
@@ -126,6 +127,7 @@
   .page-shell {
     position: relative;
     isolation: isolate;
+    overflow-x: clip;
   }
 
   .reveal-on-scroll {

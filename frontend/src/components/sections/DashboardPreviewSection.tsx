@@ -122,7 +122,7 @@ function DashboardPreviewSection() {
         className="pt-7 sm:pt-10"
       >
         <div className="overflow-hidden rounded-3xl border border-[var(--line-soft)] bg-[var(--surface-2)] shadow-[var(--shadow-md)] backdrop-blur-xl">
-          <div className="grid min-h-[420px] grid-cols-1 lg:grid-cols-[220px_1fr]">
+          <div className="grid min-h-[360px] grid-cols-1 lg:min-h-[420px] lg:grid-cols-[220px_1fr]">
             <aside className="border-b border-[rgba(255,255,255,0.1)] bg-[linear-gradient(175deg,#10233d,#15395c)] p-5 text-slate-200 lg:border-b-0 lg:border-r">
               <p className="text-xs font-semibold uppercase tracking-[0.16em] text-slate-400">Workspace</p>
               <h3 className="mt-3 text-lg font-semibold text-white">{`${APP_NAME} Ops`}</h3>
@@ -204,7 +204,7 @@ function DashboardPreviewSection() {
                 </div>
               </div>
 
-              <div className="mt-4 grid gap-3 md:grid-cols-3">
+              <div className="mt-4 grid gap-3 sm:grid-cols-2 xl:grid-cols-3">
                 {activeView.stateCards.map(([title, headline, copy]) => {
                   const isLoading = title === 'Loading State'
                   const isError = title === 'Error State'
