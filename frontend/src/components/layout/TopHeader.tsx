@@ -1,19 +1,20 @@
 import Container from '../ui/Container'
+import { APP_NAME } from '../../constants/app'
 
 function TopHeader() {
   return (
     <header className="fixed inset-x-0 top-0 z-50 border-b border-[var(--line-soft)] bg-[rgba(243,247,251,0.82)] backdrop-blur-lg">
       <Container>
         <div className="flex h-16 items-center justify-between">
-          <a href="#hero" className="inline-flex items-center gap-3" aria-label="SAINT home">
+          <a href="#hero" className="inline-flex items-center gap-3" aria-label={`${APP_NAME} home`}>
             <span
               aria-hidden="true"
               className="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-[#0f5fd4] to-[#0ea5b1] text-sm font-bold text-white shadow-[0_10px_24px_rgba(15,95,212,0.34)]"
             >
-              S
+              {APP_NAME.charAt(0)}
             </span>
             <div>
-              <p className="font-display text-sm font-semibold tracking-wide text-[var(--ink-900)] sm:text-base">SAINT</p>
+              <p className="font-display text-sm font-semibold tracking-wide text-[var(--ink-900)] sm:text-base">{APP_NAME}</p>
               <p className="hidden text-xs text-[var(--ink-500)] sm:block">AI Quality Command</p>
             </div>
           </a>

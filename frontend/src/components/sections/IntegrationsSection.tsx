@@ -1,5 +1,6 @@
 import Container from '../ui/Container'
 import Section from '../ui/Section'
+import { APP_NAME } from '../../constants/app'
 
 const logos = ['GitHub', 'Jira', 'Figma', 'X-Ray', 'OpenAI', 'Anthropic', 'Google', 'Groq']
 
@@ -10,7 +11,7 @@ function IntegrationsSection() {
         id="integrations"
         eyebrow="Integrations"
         title="Works with the tools your testing teams already use"
-        description="Plug SAINT into engineering, product, and delivery ecosystems without friction."
+        description={`Plug ${APP_NAME} into engineering, product, and delivery ecosystems without friction.`}
       >
         <div className="grid grid-cols-2 gap-3 sm:grid-cols-4 lg:grid-cols-8">
           {logos.map((logo, index) => (

@@ -28,6 +28,7 @@ function WorkflowSection() {
         eyebrow="How It Works"
         title="From prompt to production-grade test workflow in four steps"
         description="A clear progression model keeps teams aligned while preserving speed and traceability."
+        className="pt-7 sm:pt-10"
       >
         <div className="grid grid-cols-1 gap-4 lg:grid-cols-4">
           {steps.map((step, index) => (

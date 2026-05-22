@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from 'react'
 import Button from '../ui/Button'
 import Container from '../ui/Container'
 import Modal from '../ui/Modal'
+import { APP_NAME } from '../../constants/app'
 
 const agentPreviews = [
   {
@@ -46,7 +47,7 @@ function HeroSection() {
   useEffect(() => {
     const timer = window.setInterval(() => {
       setActiveAgentIndex((previousIndex) => (previousIndex + 1) % agentPreviews.length)
-    }, 800)
+    }, 1500)
 
     return () => window.clearInterval(timer)
   }, [])
@@ -71,8 +72,8 @@ function HeroSection() {
               Govern autonomous quality workflows with enterprise-grade confidence.
             </h1>
             <p className="mt-4 max-w-2xl text-base leading-7 text-[var(--ink-600)] sm:text-lg">
-              SAINT unifies orchestration, routing intelligence, and policy guardrails in a single platform for high
-              velocity QA organizations.
+              {APP_NAME} unifies orchestration, routing intelligence, and policy guardrails in a single platform for
+              high velocity QA organizations.
             </p>
 
             <form onSubmit={onSubmit} className="mt-6 max-w-xl">
@@ -219,7 +220,7 @@ execute(plan: "${activePreview.plan}")`}
         >
           <div className="rounded-xl border border-[var(--line-soft)] bg-white p-4">
             <p className="text-sm text-[var(--ink-700)]">
-              We registered <span className="font-semibold text-[var(--ink-900)]">{email}</span> for a guided SAINT
+              We registered <span className="font-semibold text-[var(--ink-900)]">{email}</span> for a guided {APP_NAME}{' '}
               product session.
             </p>
           </div>
