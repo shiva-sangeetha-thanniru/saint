@@ -67,7 +67,9 @@ function HeroSection() {
       <Container>
         <div className="glass-surface reveal-on-scroll grid gap-8 rounded-3xl p-5 sm:p-6 md:p-8 lg:grid-cols-[1.05fr_0.95fr] lg:gap-10">
           <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[var(--brand-700)]">AI Testing Control Plane</p>
+            <p className="max-w-full text-[10px] font-semibold uppercase leading-tight tracking-[0.12em] text-[var(--brand-700)] sm:text-xs sm:tracking-[0.18em]">
+              AI Testing Control Plane
+            </p>
             <h1 className="font-display mt-3 text-3xl font-semibold leading-[1.05] tracking-[-0.02em] text-[var(--ink-900)] sm:text-5xl lg:text-6xl">
               Govern autonomous quality workflows with enterprise-grade confidence.
             </h1>
@@ -114,10 +116,12 @@ function HeroSection() {
             </div>
           </div>
 
-          <aside className="self-start rounded-2xl border border-[rgba(199,216,236,0.84)] bg-[linear-gradient(165deg,#102844,#14395a)] p-5 text-slate-100 shadow-[0_20px_50px_rgba(15,23,42,0.32)]">
-            <div className="mb-4 flex items-center justify-between">
-              <p className="text-xs font-semibold uppercase tracking-[0.12em] text-cyan-200">Live Orchestration Preview</p>
-              <span className="rounded-full bg-emerald-400/20 px-2 py-1 text-[11px] font-semibold text-emerald-200">
+          <aside className="self-start rounded-2xl border border-[rgba(199,216,236,0.84)] bg-[linear-gradient(165deg,#102844,#14395a)] p-4 text-slate-100 shadow-[0_20px_50px_rgba(15,23,42,0.32)] sm:p-5">
+            <div className="mb-4 flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+              <p className="max-w-[14rem] text-[10px] font-semibold uppercase leading-tight tracking-[0.12em] text-cyan-200 sm:max-w-none sm:text-xs sm:tracking-[0.12em]">
+                Live Orchestration Preview
+              </p>
+              <span className="self-start rounded-full bg-emerald-400/20 px-2 py-1 text-[10px] font-semibold text-emerald-200 sm:self-auto sm:text-[11px]">
                 ACTIVE
               </span>
             </div>
